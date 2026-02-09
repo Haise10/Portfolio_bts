@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Hannachi Abdelmoumen - BTS SIO SISR</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">🛡️ Portfolio</div>
+            <div class="nav-links">
+                <button class="nav-btn active" onclick="showSection('accueil')">Accueil</button>
+                <button class="nav-btn" onclick="showSection('apropos')">À propos</button>
+                <button class="nav-btn" onclick="showSection('competences')">Compétences</button>
+                <button class="nav-btn" onclick="showSection('projets')">Projets</button>
+                <button class="nav-btn" onclick="showSection('experience')">Stages</button>
+                <button class="nav-btn" onclick="showSection('formations')">Formations</button>
+                <button class="nav-btn" onclick="showSection('veille')">Veille</button>
+                <button class="nav-btn" onclick="showSection('contact')">Contact</button>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section id="accueil" class="section active">
+            <div class="hero">
+                <div class="hero-icon">👨‍💻</div>
+                <h1>Hannachi Abdelmoumen</h1>
+                <p class="subtitle">Étudiant en BTS SIO SISR (2ème année)</p>
+                <p class="hero-description">
+                    Passionné par le réseau et la cybersécurité. Mon parcours mixe l'administration système et le développement logiciel pour une vision globale des infrastructures.
+                </p>
+                <div class="btn-group">
+                    <a href="tab_synthese.pdf" target="_blank" class="btn btn-primary">
+                        📄 Ma Fiche de Compétences
+                    </a>
+                    <button class="btn btn-secondary" onclick="showSection('contact')">Me contacter</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="apropos" class="section">
+            <h2>À propos</h2>
+            <div class="card">
+                <p style="margin-bottom: 1rem;">
+                    Avant de me spécialiser dans les réseaux, j'étais passionné par le <strong>développement logiciel</strong>, domaine que j'ai pu approfondir lors de mon cursus en BUT Informatique. Ce mélange entre programmation et infrastructure me permet de mieux comprendre les interactions entre le code et le matériel.
+                </p>
+                <p>
+                    Cette double compétence me permet d'appréhender aussi bien la couche applicative que l'infrastructure réseau. Je m'intéresse particulièrement à la virtualisation et à la sécurisation des systèmes.
+                </p>
+            </div>
+        </section>
+
+        <section id="competences" class="section">
+            <h2>Compétences Techniques</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <div class="skill-category">Systèmes & Réseaux</div>
+                    <ul class="skill-list">
+                        <li>Virtualisation (Proxmox, VMware)</li>
+                        <li>Administration Linux (Debian, Ubuntu) & Windows Server</li>
+                        <li>Configuration Réseau (VLANs, Routage, Cisco)</li>
+                        <li>Services (DNS, DHCP, Active Directory)</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="skill-category">Développement & DevOps</div>
+                    <ul class="skill-list">
+                        <li>Langages (Java, C++, C#)</li>
+                        <li>Web (HTML/CSS, PHP, SQL)</li>
+                        <li>Gestion de versions (Git/GitHub)</li>
+                        <li>Supervision (Checkmk, Elastic)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projets" class="section">
+            <h2>Réalisations & Mini-Projets</h2>
+            <p class="section-intro">Projets réalisés en cours de BTS SIO et lors de mon parcours BUT Info.</p>
+            
+            <div class="grid grid-2">
+                <div class="card project-card">
+                    <div class="project-header">
+                        <h3>Infrastructure "Station F"</h3>
+                        <span class="project-type">SISR / Réseau</span>
+                    </div>
+                    <p>Déploiement d'une infrastructure complète. Configuration de 3 switchs Cisco, Pare-feu Stormshield et Borne Wi-Fi. Gestion des sauvegardes de configurations.</p>
+                    <div class="tags">
+                        <span class="tech-tag">Windows Server</span>
+                        <span class="tech-tag">Cisco</span>
+                        <span class="tech-tag">Stormshield</span>
+                    </div>
+                    <div class="project-skills">
+                        <strong>Compétences :</strong> Gérer le patrimoine, Sécuriser les équipements, Mettre à disposition des services.
+                    </div>
+                </div>
+
+                <div class="card project-card">
+                    <div class="project-header">
+                        <h3>Supervision & Logs</h3>
+                        <span class="project-type">SISR / Cyber</span>
+                    </div>
+                    <p>Mise en place de tableaux de bord sur Checkmk via agents. Centralisation et analyse des logs avec la suite Elastic (ELK).</p>
+                    <div class="tags">
+                        <span class="tech-tag">Checkmk</span>
+                        <span class="tech-tag">Elasticsearch</span>
+                        <span class="tech-tag">Kibana</span>
+                    </div>
+                    <div class="project-skills">
+                        <strong>Compétences :</strong> Vérifier la disponibilité des services, Répondre aux incidents.
+                    </div>
+                </div>
+
+                <div class="card project-card">
+                    <div class="project-header">
+                        <h3>Gestion Entreprise Télécom</h3>
+                        <span class="project-type">Développement / BDD</span>
+                    </div>
+                    <p>Conception et gestion d'une base de données SQL complexe pour le suivi des abonnements clients et des services.</p>
+                    <div class="tags">
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">Modélisation</span>
+                        <span class="tech-tag">Gestion</span>
+                    </div>
+                    <div class="project-skills">
+                        <strong>Compétences :</strong> Concevoir une base de données, Traiter des données.
+                    </div>
+                </div>
+
+                <div class="card project-card">
+                    <div class="project-header">
+                        <h3>Base de données Embarquée</h3>
+                        <span class="project-type">Système / IoT</span>
+                    </div>
+                    <p>Mise en place et administration d'un serveur de base de données sur un Raspberry Pi sous environnement Linux.</p>
+                    <div class="tags">
+                        <span class="tech-tag">Linux</span>
+                        <span class="tech-tag">Raspberry Pi</span>
+                        <span class="tech-tag">MariaDB</span>
+                    </div>
+                    <div class="project-skills">
+                        <strong>Compétences :</strong> Installer et configurer des éléments d'infrastructure.
+                    </div>
+                </div>
+
+                <div class="card project-card">
+                    <div class="project-header">
+                        <h3>Application JO Paris 2024</h3>
+                        <span class="project-type">Dev Java</span>
+                    </div>
+                    <p>Application lourde en Java pour la gestion des athlètes et des équipes olympiques (CRUD).</p>
+                    <div class="tags">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">POO</span>
+                        <span class="tech-tag">IHM</span>
+                    </div>
+                    <div class="project-skills">
+                        <strong>Compétences :</strong> Développer une application, Travailler en mode projet.
+                    </div>
+                </div>
+
+                <div class="card project-card">
+                    <div class="project-header">
+                        <h3>Analyse Performance Sportive</h3>
+                        <span class="project-type">Data / Python</span>
+                    </div>
+                    <p>Traitement et analyse des performances des JO d'hiver via scripts Python et requêtes Oracle.</p>
+                    <div class="tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Matplotlib</span>
+                    </div>
+                    <div class="project-skills">
+                        <strong>Compétences :</strong> Automatiser des tâches, Analyser des données.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <h2>Expériences en Stage</h2>
+            
+            <div class="card experience-card">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Technicien Systèmes et Réseaux</div>
+                        <div class="experience-company">Stage de 2ème année</div>
+                    </div>
+                    <div class="experience-period">2025 (1 mois)</div>
+                </div>
+                <ul class="mission-list">
+                    <li>Déploiement d'un serveur de virtualisation sous Proxmox.</li>
+                    <li>Reconstruction d'une infrastructure réseau complète.</li>
+                    <li>Mise en place de règles de sécurité et de segmentation.</li>
+                </ul>
+            </div>
+
+            <div class="card experience-card">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Assistant Data Analyst & Développeur</div>
+                        <div class="experience-company">Stage de 1ère année</div>
+                    </div>
+                    <div class="experience-period">2024 (1 mois)</div>
+                </div>
+                <ul class="mission-list">
+                    <li>Analyse de données et développement de scripts automatisés.</li>
+                    <li>Apprentissage des méthodes de déploiement en production.</li>
+                    <li>Accompagnement technique sur la gestion de bases de données.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="formations" class="section">
+            <h2>Formations</h2>
+            <div class="card">
+                <div class="cert-card">
+                    <div class="cert-icon">🎓</div>
+                    <div>
+                        <div class="cert-name">BTS SIO option SISR</div>
+                        <div class="cert-org">En cours (2ème année)</div>
+                        <div class="cert-year">2025-2026</div>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">💻</div>
+                    <div>
+                        <div class="cert-name">BUT Informatique</div>
+                      
+                        <div class="cert-year">2024</div>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">📜</div>
+                    <div>
+                        <div class="cert-name">Baccalauréat Technologique STI2D</div>
+                        <div class="cert-year">2023</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="veille" class="section">
+            <h2>Veille Technologique</h2>
+            <div class="card veille-card">
+                <div class="veille-header">
+                    <h3>L'IA au service de l'administration réseau : Le AIOps</h3>
+                    
+                </div>
+                <p style="margin-bottom: 1rem;">
+                    Ma veille porte sur le <strong>AIOps (Artificial Intelligence for IT Operations)</strong>, une technologie qui automatise l'identification et la résolution des problèmes réseau avant qu'ils n'impactent les utilisateurs. 
+                </p>
+                <p style="margin-bottom: 1rem;">
+                    Contrairement à la surveillance classique par seuils, ces outils utilisent le Machine Learning pour analyser les logs en temps réel, détecter des comportements anormaux et suggérer des correctifs. Pour un administrateur SISR, l'enjeu est de passer à une <strong>maintenance prédictive</strong>, réduisant ainsi le temps d'arrêt des services.
+                </p>
+                <div class="sources">
+                    <span class="sources-label">Sources :</span>
+                    <a href="https://www.lemondeinformatique.fr" class="source-tag" target="_blank">Le Monde Informatique</a>
+                    <a href="https://www.zdnet.fr" class="source-tag" target="_blank">ZDNet</a>
+                    <a href="https://www.it-connect.fr" class="source-tag" target="_blank">IT-Connect</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Me Contacter</h2>
+            <div class="card contact-card">
+                <div class="contact-info">
+                    <span class="contact-icon">📧</span>
+                    <a href="mailto:hannachiabdelmoumen11@gmail.com">hannachiabdelmoumen11@gmail.com</a>
+                </div>
+                
+                <div class="contact-info">
+                    <span class="contact-icon">📞</span>
+                    <span>07 49 23 52 90</span>
+                </div>
+                <div class="divider"></div>
+               
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2026 - Hannachi Abdelmoumen - Portfolio E4 BTS SIO</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(s => s.classList.remove('active'));
+            const target = document.getElementById(sectionId);
+            if(target) target.classList.add('active');
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(b => b.classList.remove('active'));
+            
+            if(event && event.target.classList.contains('nav-btn')) {
+                event.target.classList.add('active');
+            } else {
+                 const navBtn = document.querySelector(`.nav-btn[onclick="showSection('${sectionId}')"]`);
+                 if(navBtn) navBtn.classList.add('active');
+            }
+            
+            document.querySelector('.nav-links').classList.remove('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
